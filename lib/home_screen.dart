@@ -81,7 +81,7 @@ class HomeScreenState extends State<HomeScreen> {
           children: [
             // InkWell(
             GestureDetector(
-              onTap: () => print('PRESS!!!'),
+              onTap: () => print('PRESS !!!'),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [Text('One'), Text('Two')],
