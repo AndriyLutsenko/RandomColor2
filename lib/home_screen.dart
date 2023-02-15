@@ -10,7 +10,7 @@ class HomeScreen extends StatefulWidget {
 class HomeScreenState extends State<HomeScreen> {
   Color? pageColor;
   // Color? textColor;
-
+  bool isTapText = false;
   // @override
   // void initState() {
   //   super.initState();
@@ -27,6 +27,7 @@ class HomeScreenState extends State<HomeScreen> {
 
   void randomPageColor() {
     setState(() {
+      isTapText = false;
       pageColor = Color.fromARGB(
           // 255, randomNumber(256), randomNumber(256), randomNumber(256));
           255,
@@ -89,21 +90,24 @@ class HomeScreenState extends State<HomeScreen> {
             ),*/
               GestureDetector(
             onTap: () {
-              randomTextColor();
+              setState(() {
+                isTapText = true;
+              });
             },
             child: Center(
-                child: RichText(
-                    textDirection: TextDirection.ltr,
-                    text: TextSpan(
-                      // text: "П",
-                      // style: TextStyle(color: randomTextColor(), fontSize: 32),
-                      children: differentColorsLetters('Привіт Світ!'),
-                    ))
-                // Text(
-                //   'Привіт',
-                //   style: TextStyle(color: textColor, fontSize: 32),
-                // ),
-                ),
+              child: isTapText
+                  ? RichText(
+                      textDirection: TextDirection.ltr,
+                      text: TextSpan(
+                        // text: "П",
+                        // style: TextStyle(color: randomTextColor(), fontSize: 32),
+                        children: differentColorsLetters('Привіт Світ!'),
+                      ))
+                  : Text(
+                      'Привіт Світ!',
+                      style: TextStyle(color: randomTextColor(), fontSize: 32),
+                    ),
+            ),
           )
           // ],
           ),
