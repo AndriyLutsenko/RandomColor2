@@ -86,6 +86,7 @@ class HomeScreenState extends State<HomeScreen> {
                   onPressed: () {
                     randomPageColor();
                   },
+                  iconSize: 44.0,
                 ),
                 IconButton(
                   icon: const Icon(Icons.format_color_text),
@@ -93,6 +94,7 @@ class HomeScreenState extends State<HomeScreen> {
                   onPressed: () {
                     randomTextColor();
                   },
+                  iconSize: 44.0,
                 ),
                 IconButton(
                   icon: const Icon(Icons.text_format),
@@ -102,6 +104,7 @@ class HomeScreenState extends State<HomeScreen> {
                       isTapText = true;
                     });
                   },
+                  iconSize: 44.0,
                 ),
               ],
             ),
@@ -120,6 +123,7 @@ class HomeScreenState extends State<HomeScreen> {
                       isTapText = false;
                     });
                   },
+                  iconSize: 48.0,
                 ),
                 IconButton(
                   icon: const Icon(Icons.brush),
@@ -131,6 +135,7 @@ class HomeScreenState extends State<HomeScreen> {
                       isTapText = true;
                     });
                   },
+                  iconSize: 48.0,
                 ),
               ],
             ),
